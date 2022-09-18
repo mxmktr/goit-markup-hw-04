@@ -342,6 +342,7 @@ html {
 }
 .client-list-item:nth-child(5) .client-list-link {
     background-image: url(../images/client5.svg);
+    fill: #afb1b8;
 }
 .client-list-item:nth-child(6) .client-list-link {
     background-image: url(../images/client6.svg);
