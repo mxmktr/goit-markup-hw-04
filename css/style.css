@@ -35,11 +35,10 @@ html {
     font-family: var(--main-font);
     font-size: 14px;
 }
-/*
+
 * {
     outline: 1px solid #ff0000;
 }
-*/
 
 .header {
     border-bottom: 1px solid #ececec;
@@ -59,6 +58,7 @@ html {
 .navigation {
     display: flex;
 }
+
 .logo {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -68,6 +68,11 @@ html {
     color: var(--logo-color);
     letter-spacing: 0.03em;
     margin-right: 93px;
+}
+
+.logo-upper,
+.logo-bottom {
+    display: inline-block;
 }
 
 .logo-upper {
@@ -98,14 +103,22 @@ html {
     gap: 50px;
 }
 
-.contact-navigation {
-    color: var(--text-color);
+.navigation-icon {
+    display: block;
+    fill: red;
+    width: 16px;
+    height: 12px;
+    background-color: black;
 }
 
 .site-navigation,
 .contact-navigation {
-    display: block;
+    display: flex;
     padding: 32px 0px;
+    align-items: center;
+}
+.icon-container {
+    width: 15px 15px;
 }
 /*
 .site-navigation:hover,
@@ -171,6 +184,38 @@ html {
     gap: 30px;
 }
 
+.company-skills-item::before {
+    content: '';
+    display: block;
+    margin-bottom: 30px;
+    height: 120px;
+    border-radius: 4px;
+
+    background-color: #f5f4fa;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.company-skills-item:nth-child(1)::before {
+    content: '';
+    background-image: url(../images/antenna.svg);
+}
+
+.company-skills-item:nth-child(2)::before {
+    content: '';
+    background-image: url(../images/clock.svg);
+}
+
+.company-skills-item:nth-child(3)::before {
+    content: '';
+    background-image: url(../images/diagram.svg);
+}
+
+.company-skills-item:nth-child(4)::before {
+    content: '';
+    background-image: url(../images/astronaut.svg);
+}
+
 /* Answer for Yuriy or i am going to think myself
 .company-skills > li {
     display: inline-block;
@@ -199,7 +244,7 @@ html {
     letter-spacing: 0.03em;
 }
 
-.job-title {
+.title {
     font-size: 36px;
     font-weight: 700;
     line-height: 117%;
@@ -259,6 +304,47 @@ html {
     line-height: 119%;
     letter-spacing: 0.03em;
     text-align: center;
+}
+
+.client-list {
+    display: flex;
+    gap: 30px;
+}
+
+.client-list-item {
+    display: inline-flex;
+}
+
+.client-list-link {
+    cursor: pointer;
+    height: 92px;
+    width: 170px;
+
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    background-size: 106px 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.client-list-item:nth-child(1) .client-list-link {
+    background-image: url(../images/client1.svg);
+}
+.client-list-item:nth-child(2) .client-list-link {
+    background-image: url(../images/client2.svg);
+}
+.client-list-item:nth-child(3) .client-list-link {
+    background-image: url(../images/client3.svg);
+}
+.client-list-item:nth-child(4) .client-list-link {
+    background-image: url(../images/client4.svg);
+}
+.client-list-item:nth-child(5) .client-list-link {
+    background-image: url(../images/client5.svg);
+}
+.client-list-item:nth-child(6) .client-list-link {
+    background-image: url(../images/client6.svg);
 }
 
 .logo.footer-logo {
@@ -342,8 +428,19 @@ address a:focus {
 }
 
 .hero-container {
-    background-color: var(--full-page-color);
     padding: 200px 0;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    background-color: var(--full-page-color);
+    background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-img.jpg);
+    /*we can not to add these properties*/
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .visually-hidden {
