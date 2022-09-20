@@ -302,11 +302,15 @@ html {
     gap: 30px;
 }
 
-.client-list-link {
+.client-list-item {
     height: 92px;
-    width: 170px;
+    flex-basis: calc((100% - 150px) / 6);
+}
 
-    display: inline-flex;
+.client-list-link {
+    height: inherit;
+
+    display: flex;
     align-items: center;
     justify-content: center;
 
