@@ -298,12 +298,17 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 27px;
+
+    gap: 30px;
 }
 
 .client-list-link {
+    height: 92px;
+    width: 170px;
+
     display: inline-flex;
-    padding: 16px 32px;
+    align-items: center;
+    justify-content: center;
 
     border: 1px solid var(--main-social-icon-color);
     border-radius: 4px;
@@ -473,8 +478,8 @@ address a:focus {
     align-items: baseline;
 }
 
-.connect-box {
-    padding-left: 70px;
+.address-box {
+    margin-right: 70px;
 }
 
 .strong {
